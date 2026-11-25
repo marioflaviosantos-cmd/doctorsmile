@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inove Odontologia · Dr. Eterno Freitas · Implantes e Prótese Protocolo em Garanhuns</title>
+<meta name="description" content="Espaço Inove Odontologia e Estética Integrada, em Garanhuns. Implantes dentários e prótese protocolo com o Dr. Eterno Freitas Jr., CRO-PE 9753.">
+<meta name="theme-color" content="#26346F">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Inove Odontologia · Implantes e Prótese Protocolo em Garanhuns">
+<meta property="og:description" content="Implantes dentários e prótese protocolo com o Dr. Eterno Freitas Jr., CRO-PE 9753. Agende sua avaliação pelo WhatsApp.">
+<meta property="og:image" content="/img/og-inove.jpg">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/img/dr-eterno-hero-1080.webp" imagesrcset="/img/dr-eterno-hero-640.webp 640w, /img/dr-eterno-hero-1080.webp 1080w" imagesizes="(min-width:960px) 600px, 92vw" fetchpriority="high">
+<style>
+@font-face{font-family:"Jost";font-style:normal;font-weight:300 500;font-display:swap;src:url(/fonts/jost-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --marinho:#26346F;
+  --marinho-fundo:#1A2452;
+  --tinta:#161D3D;
+  --texto:#3E4560;
+  --suave:#62697F;
+  --ouro:#D2B57E;
+  --ouro-escuro:#8A6A2F;
+  --papel:#FFFFFF;
+  --moldura:#E9EAF0;
+  --nevoa:#F4F4F7;
+  --linha:#DCDEE6;
+  --f:"Jost",system-ui,sans-serif;
+  --e1:.5rem;--e2:1rem;--e3:1.5rem;--e4:2rem;--e5:3rem;--e6:4.5rem;--e7:7rem;
+  --r1:12px;--r2:20px;--r3:28px;
+  --larg:1280px;--quadro:1920px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--moldura);color:var(--texto);font-family:var(--f);font-weight:400;font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f);color:var(--tinta);font-weight:300;line-height:1.08;letter-spacing:-.02em;margin:0}
+p{margin:0}
+:focus-visible{outline:2px solid var(--ouro-escuro);outline-offset:3px;border-radius:6px}
+.folha{background:var(--papel);margin:8px;border-radius:var(--r3);overflow:hidden}
+.miolo{width:100%;max-width:calc(var(--larg) + 2*var(--e3));margin:0 auto;padding:0 var(--e3)}
+.sobrelinha{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-escuro)}
+.sobrelinha::before{content:"";width:22px;height:1px;background:currentColor}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.75rem;min-height:52px;padding:.35rem .4rem .35rem 1.4rem;border-radius:999px;font:500 1rem/1 var(--f);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .2s}
+.btn .seta{display:grid;place-items:center;width:42px;height:42px;border-radius:50%}
+.btn-roll{position:relative;display:block;overflow:hidden;text-align:left;line-height:1.25}
+.btn-roll span{display:block;transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.btn-roll span+span{position:absolute;inset:0;transform:translateY(110%)}
+:is(.btn,.trat-acao):hover .btn-roll span,:is(.btn,.trat-acao):focus-visible .btn-roll span{transform:translateY(-110%)}
+:is(.btn,.trat-acao):hover .btn-roll span+span,:is(.btn,.trat-acao):focus-visible .btn-roll span+span{transform:none}
+.seta{position:relative;overflow:hidden}
+.seta .ico{grid-area:1/1;transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.seta .ico+.ico{transform:translate(-190%,190%)}
+:is(.btn,.trat-acao):hover .seta .ico,:is(.btn,.trat-acao):focus-visible .seta .ico{transform:translate(190%,-190%)}
+:is(.btn,.trat-acao):hover .seta .ico+.ico,:is(.btn,.trat-acao):focus-visible .seta .ico+.ico{transform:none}
+.btn-ouro{background:var(--ouro);color:var(--tinta)}
+.btn-ouro .seta{background:var(--tinta);color:var(--ouro)}
+.btn-ouro:hover{background:#DEC48F}
+.btn-marinho{background:var(--marinho);color:#fff}
+.btn-marinho .seta{background:#fff;color:var(--marinho)}
+.btn-marinho:hover{background:var(--marinho-fundo)}
+.btn-linha{color:#fff;border-color:rgba(255,255,255,.35);padding:.35rem 1.4rem}
+.btn-linha:hover{border-color:#fff}
+
+/* abertura com abas */
+.abertura{padding:8px 8px 0}
+.palco{--aba:72px;position:relative;max-width:var(--quadro);margin:0 auto;color:#fff;border-radius:var(--r3);overflow:hidden;isolation:isolate;
+  background:radial-gradient(70% 80% at 75% 55%,rgba(52,74,170,.35),transparent 70%),linear-gradient(160deg,#1E2A66 0%,#18214A 55%,#11183A 100%)}
+.palco-topo{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;height:var(--aba);padding:0 var(--e2) 0 var(--e3);border-bottom:1px solid rgba(255,255,255,.1)}
+.recorte{position:relative;display:flex;align-items:center;gap:.5rem;height:100%}
+.recorte::before,.recorte::after{content:none;position:absolute;width:var(--r2);height:var(--r2);pointer-events:none}
+.marca{display:flex;align-items:center;text-decoration:none;line-height:1}
+.logo-img{display:block;width:auto;height:40px}
+.marca{background:var(--moldura);padding:5px 12px;border-radius:14px}
+.menu-botao{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;transition:border-color .2s,background-color .2s}
+.menu-botao:hover,.menu-botao[aria-expanded="true"]{border-color:var(--ouro);background:rgba(210,181,126,.12)}
+.btn-topo{display:none}
+.menu{list-style:none;margin:0;padding:var(--e3);display:none;position:absolute;z-index:11;left:var(--e1);right:var(--e1);top:calc(100% + var(--e1));background:var(--marinho-fundo);border-radius:var(--r2);flex-direction:column;gap:.25rem;box-shadow:0 20px 40px rgba(10,14,36,.35)}
+.menu[data-aberto]{display:flex}
+.menu a{display:block;padding:.75rem .5rem;color:#fff;text-decoration:none;font-size:1.1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.menu a:hover{color:var(--ouro)}
+.menu .menu-cta{margin-top:var(--e2)}
+.menu .menu-cta a{border:0;display:inline-flex;padding:.35rem .4rem .35rem 1.4rem;color:var(--tinta)}
+.palco-grade{display:grid;padding:calc(var(--aba) + var(--e4)) var(--e3) 0}
+.palco-texto{position:relative;z-index:4;padding-bottom:var(--e2)}
+.palco .sobrelinha{color:var(--ouro)}
+.palco h1{color:#fff;font-size:clamp(2.6rem,9vw,5.6rem);margin:var(--e2) 0 var(--e3);max-width:11ch}
+.palco h1 em{font-style:normal;color:var(--ouro)}
+.palco-texto p{max-width:34rem;color:rgba(255,255,255,.84);font-size:1.0625rem}
+.palco-acoes{display:grid;gap:.75rem;margin-top:var(--e4);max-width:360px}
+.palco-acoes .btn{width:100%;justify-content:space-between}
+.palco-acoes .btn-linha{justify-content:center}
+.retrato{position:relative;margin:var(--e3) auto 0;width:min(100%,420px);aspect-ratio:4/5}
+.retrato img{position:relative;z-index:2;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.orbita{position:absolute;z-index:0;left:50%;top:48%;width:0;height:0;pointer-events:none}
+.orbita>*{position:absolute;left:0;top:0;border-radius:50%;transform:translate(-50%,-50%)}
+.disco{width:min(86vw,340px);aspect-ratio:1;background:radial-gradient(circle at 32% 28%,#6F8BEA 0%,#3F59C4 38%,#2A3F98 70%,#22327A 100%);box-shadow:0 0 80px rgba(70,100,220,.45),inset 0 0 60px rgba(255,255,255,.08)}
+.anel{border:1px dashed rgba(190,205,255,.22)}
+.anel-1{width:min(120vw,470px);aspect-ratio:1}
+.anel-2{width:min(160vw,640px);aspect-ratio:1;border-style:solid;border-color:rgba(190,205,255,.1)}
+.ponto{width:10px;height:10px;left:calc(min(60vw,235px) * .64);top:calc(min(60vw,235px) * -.77);background:#9DB2FF;box-shadow:0 0 0 5px rgba(157,178,255,.18),0 0 18px #9DB2FF}
+.selo-vidro{position:absolute;z-index:3;display:flex;align-items:center;gap:.45rem;padding:.3rem .8rem .3rem .3rem;border-radius:999px;background:rgba(28,40,100,.5);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 30px rgba(8,12,34,.3);font-size:.66rem;line-height:1.3;color:#fff;max-width:180px}
+.selo-vidro .ico-wrap{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);color:var(--ouro)}
+.selo-a{right:0;top:30%}
+.selo-vidro .ico{width:15px;height:15px}
+.selo-b{left:0;bottom:18%}
+
+/* sobre */
+.secao{padding:var(--e6) 0}
+.sobre-topo{display:grid;gap:var(--e3)}
+.sobre-topo h2{font-size:clamp(2.2rem,6vw,3.6rem)}
+.sobre-topo p{font-size:1.2rem;line-height:1.6;color:var(--texto);max-width:36rem}
+.numeros{display:grid;grid-template-columns:1fr 1fr;margin-top:var(--e5);border-top:1px solid var(--linha)}
+.numero{padding:var(--e3) var(--e2) var(--e3) 0;border-bottom:1px solid var(--linha)}
+.numero:nth-child(odd){border-right:1px solid var(--linha)}
+.numero:nth-child(even){padding-left:var(--e3)}
+.numero strong{display:block;font-weight:300;font-size:clamp(2.6rem,8vw,4rem);line-height:1;color:var(--marinho);letter-spacing:-.03em}
+.numero span{display:block;margin-top:.6rem;font-size:.95rem;color:var(--suave);line-height:1.4}
+
+/* tratamentos */
+.tratamentos{background:radial-gradient(60% 50% at 85% 0%,rgba(60,85,190,.28),transparent 70%),var(--marinho-fundo);color:#fff}
+.tratamentos .sobrelinha{color:var(--ouro)}
+.trat-cabeca{display:grid;gap:var(--e3);margin-bottom:var(--e5)}
+.trat-cabeca h2{color:#fff;font-size:clamp(2.4rem,6.5vw,4.2rem)}
+.trat-cabeca h2 em{font-style:normal;color:var(--ouro);display:block}
+.trat-cabeca p{max-width:30rem;color:rgba(255,255,255,.75)}
+.trat-lado{display:grid;gap:var(--e3);justify-items:start}
+.trat-grade{display:grid;gap:var(--e3)}
+.trat-card{position:relative;display:flex;flex-direction:column;padding:10px;border-radius:var(--r3);background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);transition:border-color .25s,background-color .25s}
+.trat-card:hover{border-color:rgba(210,181,126,.5);background:rgba(255,255,255,.07)}
+.trat-midia{position:relative;aspect-ratio:3/2;border-radius:var(--r2);overflow:hidden;background:#0B0B0D}
+.trat-midia img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.trat-card:hover .trat-midia img{transform:scale(1.04)}
+.trat-num{position:absolute;top:14px;left:14px;padding:.3rem .8rem;border-radius:999px;background:rgba(14,20,48,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);font-size:.75rem;font-weight:500;letter-spacing:.14em;color:var(--ouro)}
+.compara{--pos:50%;position:absolute;inset:0;overflow:hidden;touch-action:pan-y;user-select:none}
+.c-camada{position:absolute;inset:0;overflow:hidden}
+.c-camada img{width:100%;height:100%;object-fit:cover}
+.c-antes{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.c-linha{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;pointer-events:none;box-shadow:0 0 12px rgba(0,0,0,.25)}
+.c-pega{position:absolute;top:50%;left:50%;display:grid;place-items:center;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:#fff;color:var(--tinta);box-shadow:0 6px 18px rgba(8,12,34,.3)}
+.c-pega .ico{width:22px;height:22px;stroke-width:2}
+.c-tag{position:absolute;bottom:14px;padding:.3rem .8rem;border-radius:999px;background:rgba(14,20,48,.7);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:.75rem;font-weight:500;color:#fff;pointer-events:none}
+.c-tag-a{left:14px}.c-tag-d{right:14px}
+.compara input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;-webkit-appearance:none;appearance:none}
+.compara:has(input:focus-visible) .c-pega{outline:2px solid var(--ouro);outline-offset:3px}
+.trat-caso{font-size:.8rem;color:rgba(255,255,255,.55)}
+.trat-ilus{position:absolute;right:12px;bottom:10px;font-size:.68rem;color:rgba(20,28,60,.7)}
+.trat-corpo{display:flex;flex-direction:column;gap:var(--e2);padding:var(--e3) var(--e2) var(--e2)}
+.trat-corpo h3{color:#fff;font-size:clamp(1.8rem,4vw,2.4rem)}
+.trat-corpo p{color:rgba(255,255,255,.75)}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{padding:.4rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.16);font-size:.88rem;color:rgba(255,255,255,.9)}
+.trat-acao{display:flex;align-items:center;justify-content:space-between;gap:var(--e2);margin-top:var(--e2);padding-top:var(--e3);border-top:1px solid rgba(255,255,255,.1);color:#fff;text-decoration:none;font-weight:500}
+.trat-acao .seta{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--ouro);color:var(--tinta)}
+.trat-acao .btn-roll{flex:1}
+
+/* doutor */
+.dr-grade{display:grid;gap:var(--e5);align-items:center}
+.dr-midia{position:relative;margin:0;max-width:520px;width:100%;justify-self:center}
+.dr-midia>img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:var(--r3)}
+.dr-selo{position:absolute;right:-6px;bottom:-6px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.35rem;width:42%;aspect-ratio:1;padding:var(--e2);border-radius:var(--r3);border:10px solid var(--papel);text-align:center;color:#fff;
+  background:radial-gradient(circle at 30% 25%,#3B55BB 0%,#26346F 60%,#1A2452 100%)}
+.dr-selo strong{font-weight:300;font-size:clamp(2.6rem,9vw,3.6rem);line-height:1;letter-spacing:-.03em}
+.dr-selo strong small{font-size:.55em;color:var(--ouro);vertical-align:top}
+.dr-selo span{font-size:.85rem;line-height:1.3;color:rgba(255,255,255,.82)}
+.dr-texto h2{font-size:clamp(2.4rem,6vw,3.8rem);margin:var(--e2) 0 var(--e3)}
+.dr-texto>p{max-width:34rem;margin-bottom:var(--e2)}
+.checks{list-style:none;margin:var(--e4) 0;padding:0;display:grid;gap:.9rem var(--e3)}
+.checks li{display:flex;gap:.65rem;align-items:flex-start;font-weight:500;color:var(--tinta);line-height:1.35}
+.checks .ico{flex:none;width:20px;height:20px;margin-top:.05rem;color:var(--marinho);stroke-width:2.2}
+
+/* depoimentos */
+.depo{background:var(--marinho-fundo);color:#fff;border-radius:var(--r3);margin:0 8px}
+.depo h2{color:#fff;font-size:clamp(2.2rem,6vw,3.6rem)}
+.depo .sobrelinha{color:var(--ouro)}
+.depo-cabeca{display:grid;gap:var(--e3);margin-bottom:var(--e5)}
+.nota{display:flex;align-items:center;gap:var(--e2)}
+.nota strong{font-size:3.4rem;font-weight:300;line-height:1;color:var(--ouro)}
+.nota span{font-size:.95rem;line-height:1.4;color:rgba(255,255,255,.8)}
+.estrelas{display:flex;gap:2px;color:var(--ouro);margin-bottom:.25rem}
+.estrelas svg{width:16px;height:16px;fill:currentColor}
+.trilho{display:flex;gap:var(--e2);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--e2);scrollbar-width:none}
+.trilho::-webkit-scrollbar{display:none}
+.cartao{flex:0 0 86%;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;gap:var(--e3);padding:var(--e4) var(--e3);border-radius:var(--r2);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.cartao blockquote{margin:0;font-size:1.0625rem;line-height:1.65;color:rgba(255,255,255,.9)}
+.cartao footer{display:flex;align-items:center;gap:.75rem;font-size:.95rem}
+.inicial{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ouro);color:var(--tinta);font-weight:500}
+.cartao footer small{display:block;color:rgba(255,255,255,.6);font-size:.8rem}
+.carrossel-setas{display:flex;gap:.5rem;margin-top:var(--e3)}
+.carrossel-setas button{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;transition:border-color .2s,background-color .2s}
+.carrossel-setas button:hover{border-color:var(--ouro);background:rgba(210,181,126,.12)}
+
+/* agendar */
+.agendar-grade{display:grid;gap:var(--e3)}
+.agendar-info h2{font-size:clamp(2.2rem,6vw,3.6rem);margin:var(--e2) 0 var(--e3)}
+.dados{list-style:none;padding:0;margin:var(--e4) 0 0;display:grid}
+.dados li{display:flex;gap:var(--e2);padding:var(--e2) 0;border-top:1px solid var(--linha)}
+.dados .ico{color:var(--marinho);margin-top:.2rem}
+.dados strong{display:block;font-weight:500;color:var(--tinta)}
+.dados a{color:var(--marinho);text-underline-offset:3px}
+.form{background:var(--nevoa);border-radius:var(--r3);padding:var(--e4) var(--e3);display:grid;gap:var(--e3)}
+.form h3{font-size:1.8rem}
+.campo{display:grid;gap:.4rem}
+.campo label{font-size:.85rem;font-weight:500;letter-spacing:.06em;color:var(--tinta)}
+.campo input,.campo select{width:100%;min-height:52px;padding:.75rem 1rem;border-radius:var(--r1);border:1px solid var(--linha);background:#fff;font:400 1rem var(--f);color:var(--tinta)}
+.campo input:focus,.campo select:focus{outline:2px solid var(--marinho);outline-offset:1px;border-color:var(--marinho)}
+.form .btn{justify-content:space-between;width:100%}
+.form small{font-size:.8rem;color:var(--suave);line-height:1.4}
+
+/* rodapé */
+.rodape{padding:var(--e6) 0 var(--e4);color:rgba(255,255,255,.75);background:radial-gradient(60% 80% at 90% 0%,rgba(60,85,190,.25),transparent 70%),var(--marinho-fundo)}
+.rodape-grade{display:grid;gap:var(--e4)}
+.rodape-logo{display:block;width:200px;height:auto}
+.rodape h3{font-size:.78rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);margin-bottom:var(--e2)}
+.rodape ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.rodape a{text-decoration:none;color:#fff}
+.rodape a:hover{color:var(--ouro);text-decoration:underline;text-underline-offset:3px}
+.rodape-base{margin-top:var(--e5);padding-top:var(--e3);border-top:1px solid rgba(255,255,255,.12);font-size:.85rem;color:rgba(255,255,255,.6);display:grid;gap:.4rem}
+
+/* revela */
+.com-js [data-revela]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.com-js [data-revela].visto{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .cartao{flex-basis:calc(50% - .5rem)}
+  .numeros{grid-template-columns:repeat(4,1fr)}
+  .numero,.numero:nth-child(even){padding:var(--e4) var(--e3)}
+  .numero:first-child{padding-left:0}
+  .numero:nth-child(odd){border-right:0}
+  .numero+.numero{border-left:1px solid var(--linha)}
+}
+@media (min-width:960px){
+  .dr-grade{grid-template-columns:.95fr 1.05fr;gap:var(--e6)}
+  .dr-midia{justify-self:start}
+  .checks{grid-template-columns:1fr 1fr}
+  .abertura{padding:14px 14px 0}
+  .palco{--aba:84px;display:flex;flex-direction:column;min-height:min(880px,calc(100svh - 28px));border-radius:0 0 var(--r3) var(--r3)}
+  .palco-topo{padding:0;border:0}
+  .logo-img{height:56px}
+  .marca{background:none;padding:0;border-radius:0}
+  .recorte{background:var(--moldura)}
+  .recorte::before,.recorte::after{content:""}
+  .recorte-logo{padding:0 var(--e4) 0 max(var(--e4),calc((100% - 1280px)/2));border-bottom-right-radius:var(--r2)}
+  .recorte-logo::before{top:0;left:100%;background:radial-gradient(circle at 100% 100%,transparent calc(var(--r2) - .5px),var(--moldura) var(--r2))}
+  .recorte-logo::after{top:100%;left:0;background:radial-gradient(circle at 100% 100%,transparent calc(var(--r2) - .5px),var(--moldura) var(--r2))}
+  .recorte-acao{padding:0 max(var(--e4),calc((100% - 1280px)/2)) 0 var(--e3);border-bottom-left-radius:var(--r2)}
+  .recorte-acao::before{top:0;right:100%;background:radial-gradient(circle at 0 100%,transparent calc(var(--r2) - .5px),var(--moldura) var(--r2))}
+  .recorte-acao::after{top:100%;right:0;background:radial-gradient(circle at 0 100%,transparent calc(var(--r2) - .5px),var(--moldura) var(--r2))}
+  .btn-topo{display:inline-flex}
+  .menu-botao{display:none}
+  .palco-topo nav{flex:1;display:flex;justify-content:center;padding:0 var(--e3)}
+  .menu{display:flex;flex-direction:row;align-items:center;gap:clamp(2.5rem,3.4vw,4rem);position:static;padding:0;background:none;box-shadow:none}
+  .menu a{border:0;padding:.4rem 0;font-size:1rem}
+  .menu .menu-cta{display:none}
+  .palco-grade{flex:1;width:min(100% - 4rem,1280px);margin:0 auto;padding:var(--aba) 0 0;grid-template-columns:1.05fr .95fr;gap:var(--e4)}
+  .palco-acoes{display:flex;flex-wrap:wrap;max-width:none}
+  .palco-acoes .btn{width:auto}
+  .palco-acoes .btn-linha{padding:.35rem 1.6rem}
+  .palco-texto{align-self:center;padding:var(--e5) 0 var(--e6)}
+  .retrato{margin:0;width:100%;height:100%;aspect-ratio:auto;align-self:end;min-height:560px}
+  .orbita{top:50%}
+  .disco{width:540px}
+  .anel-1{width:780px}
+  .anel-2{width:1080px}
+  .ponto{left:250px;top:-298px}
+  .selo-vidro{font-size:.88rem;padding:.55rem 1.4rem .55rem .55rem;max-width:280px}
+  .selo-vidro .ico-wrap{width:46px;height:46px}
+  .selo-vidro{gap:.7rem}
+  .selo-vidro .ico{width:20px;height:20px}
+  .selo-a{right:2%;top:30%}
+  .selo-b{left:-16%;bottom:24%}
+  .folha{width:calc(100% - 28px);max-width:var(--quadro);margin:14px auto}
+  .depo{width:calc(100% - 28px);max-width:var(--quadro);margin:0 auto}
+  .miolo{max-width:calc(var(--larg) + 2*var(--e5));padding:0 var(--e5)}
+  .secao{padding:var(--e7) 0}
+  .sobre-topo{grid-template-columns:1fr 1.2fr;align-items:end;gap:var(--e6)}
+  .trat-cabeca{grid-template-columns:1.1fr .9fr;align-items:end;gap:var(--e6)}
+  .trat-grade{grid-template-columns:1fr 1fr;gap:var(--e4)}
+  .trat-corpo{padding:var(--e4) var(--e3) var(--e3)}
+  .depo-cabeca{grid-template-columns:1fr auto;align-items:end}
+  .cartao{flex-basis:calc(33.333% - .7rem)}
+  .agendar-grade{grid-template-columns:1fr 1fr;gap:var(--e6);align-items:start}
+  .form{padding:var(--e5) var(--e4)}
+  .rodape-grade{grid-template-columns:1.2fr 1fr 1fr 1fr}
+  .rodape-base{grid-template-columns:1fr auto}
+}
+@media (prefers-reduced-motion:reduce){
+  .btn-roll span,.seta .ico{transition:none}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .com-js [data-revela]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="abertura" id="inicio">
+  <section class="palco" aria-labelledby="titulo">
+    <div class="palco-topo">
+    <div class="recorte recorte-logo"><a class="marca" href="#inicio" aria-label="Início"><img decoding="async" height="56" width="168" class="logo-img" src="/img/logo-inove.webp" alt="Espaço Inove · Odontologia & Estética Integrada"></a></div>
+    <nav aria-label="Principal">
+      <ul class="menu" id="menu" data-menu>
+        <li><a href="#clinica">Clínica</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#dr-eterno">Dr. Eterno</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#agendar">Contato</a></li>
+        <li class="menu-cta"><a class="btn btn-ouro" href="#agendar"><span class="btn-roll"><span>Agendar avaliação</span><span aria-hidden="true">Agendar avaliação</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+      </ul>
+    </nav>
+    <div class="recorte recorte-acao">
+      <a class="btn btn-marinho btn-topo" href="#agendar"><span class="btn-roll"><span>Agendar avaliação</span><span aria-hidden="true">Agendar avaliação</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      <button class="menu-botao" type="button" data-menu-botao aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+    </div>
+    <div class="palco-grade">
+      <div class="palco-texto">
+        <span class="sobrelinha">Implantes e prótese protocolo · Garanhuns</span>
+        <h1 id="titulo">O dentista que você <em>procura.</em></h1>
+        <p>Na Clínica Inove, acreditamos que a verdadeira estética começa pela função. Nossa especialidade é transformar sorrisos com segurança e cuidado clínico.</p>
+        <div class="palco-acoes">
+          <a class="btn btn-ouro" href="https://wa.me/5587981393968"><span class="btn-roll"><span>Conversar no WhatsApp</span><span aria-hidden="true">Conversar no WhatsApp</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <a class="btn btn-linha" href="#tratamentos"><span class="btn-roll"><span>Ver tratamentos</span><span aria-hidden="true">Ver tratamentos</span></span></a>
+        </div>
+      </div>
+      <figure class="retrato">
+        <div class="orbita" aria-hidden="true"><span class="anel anel-2"></span><span class="anel anel-1"></span><span class="disco"></span><span class="ponto"></span></div>
+        <img fetchpriority="high" srcset="/img/dr-eterno-hero-640.webp 640w, /img/dr-eterno-hero-1080.webp 1080w" sizes="(min-width:960px) 600px, 92vw" height="1350" width="1080" src="/img/dr-eterno-hero-1080.webp" alt="Dr. Eterno Freitas Jr. de braços cruzados, com o jaleco azul-marinho bordado “Reabilitação oral”">
+        <span class="selo-vidro selo-a"><span class="ico-wrap"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Reabilitação oral<br>CRO-PE 9753</span></span>
+        <span class="selo-vidro selo-b"><span class="ico-wrap"><svg class="ico" viewBox="0 0 24 24"><path d="M7 3c-2.2 0-4 1.8-4 4.2 0 3 1.4 4.6 2 7.3.5 2.4.9 6.5 2.6 6.5 1.6 0 1.6-3.5 2.4-5.4.4-.9 1.6-.9 2 0 .8 1.9.8 5.4 2.4 5.4 1.7 0 2.1-4.1 2.6-6.5.6-2.7 2-4.3 2-7.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3Z"/></svg></span><span>Especialista em implantes<br>e prótese protocolo</span></span>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<main>
+
+<section class="secao folha" id="clinica" aria-labelledby="t-sobre">
+  <div class="miolo">
+    <div class="sobre-topo" data-revela>
+      <div>
+        <span class="sobrelinha">Sobre a Inove</span>
+        <h2 id="t-sobre" style="margin-top:1rem">Um espaço dedicado à reabilitação oral.</h2>
+      </div>
+      <p>A Inove Odontologia é um espaço dedicado à reabilitação oral com qualidade, acolhimento e especialistas em cada área. Nosso foco é devolver função, saúde bucal e autoestima, com técnicas avançadas e uma equipe capacitada.</p>
+    </div>
+    <div class="numeros" data-revela>
+      <div class="numero"><strong>14</strong><span>anos de experiência em odontologia</span></div>
+      <div class="numero"><strong>3.000</strong><span>pacientes atendidos</span></div>
+      <div class="numero"><strong>5,0</strong><span>de nota no Google</span></div>
+      <div class="numero"><strong>127</strong><span>avaliações de pacientes no Google</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao tratamentos folha" id="tratamentos" aria-labelledby="t-trat">
+  <div class="miolo">
+    <div class="trat-cabeca" data-revela>
+      <div>
+        <span class="sobrelinha">Nossos procedimentos</span>
+        <h2 id="t-trat" style="margin-top:1rem">Implantes e <em>prótese protocolo.</em></h2>
+      </div>
+      <div class="trat-lado">
+        <p>Especialização em técnicas avançadas para devolver função, estética e confiança ao sorriso. Cada caso começa com uma avaliação e um planejamento feito para você.</p>
+        <a class="btn btn-ouro" href="https://wa.me/5587981393968"><span class="btn-roll"><span>Tirar uma dúvida</span><span aria-hidden="true">Tirar uma dúvida</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      </div>
+    </div>
+    <div class="trat-grade">
+      <article class="trat-card" data-revela>
+        <div class="trat-midia">
+          <div class="compara" data-compara style="--pos:62%">
+            <div class="c-camada"><img srcset="/img/implante-depois-640.webp 640w, /img/implante-depois-1000.webp 1000w" sizes="(min-width:960px) 600px, 92vw" src="/img/implante-depois-1000.webp" alt="Depois: sorriso com os dentes da frente repostos sobre implante" width="800" height="533" loading="lazy" decoding="async" style="transform-origin:42.6% 54.8%;transform:translate(7.15%,-0.4%) scale(1.49)"></div>
+            <div class="c-camada c-antes"><img srcset="/img/implante-antes-640.webp 640w, /img/implante-antes-1000.webp 1000w" sizes="(min-width:960px) 600px, 92vw" src="/img/implante-antes-1000.webp" alt="Antes: sorriso com falha entre os dentes da frente" width="800" height="533" loading="lazy" decoding="async" style="transform:rotate(180deg)"></div>
+            <span class="c-linha" aria-hidden="true"><span class="c-pega"><svg class="ico" viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span></span>
+            <span class="c-tag c-tag-a" aria-hidden="true">Antes</span><span class="c-tag c-tag-d" aria-hidden="true">Depois</span>
+            <input type="range" min="0" max="100" value="62" aria-label="Arraste para comparar antes e depois">
+          </div>
+          <span class="trat-num">01</span>
+        </div>
+        <div class="trat-corpo">
+          <span class="trat-caso">Caso clínico da Inove · Dr. Eterno Freitas Jr., CRO-PE 9753</span>
+          <h3>Implantes dentários</h3>
+          <p>Para recuperar a função mastigatória e a estética do sorriso. A técnica é minimamente invasiva, pensada para mais conforto durante a cicatrização.</p>
+          <ul class="chips"><li>Unitários e múltiplos</li><li>Cirurgia guiada</li><li>Carga imediata quando possível</li><li>Acompanhamento</li></ul>
+          <a class="trat-acao" href="https://wa.me/5587981393968"><span class="btn-roll"><span>Perguntar sobre implantes</span><span aria-hidden="true">Perguntar sobre implantes</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+      </article>
+      <article class="trat-card" data-revela>
+        <div class="trat-midia">
+          <div class="compara" data-compara>
+            <div class="c-camada"><img srcset="/img/protocolo-depois-640.webp 640w, /img/protocolo-depois-1000.webp 1000w" sizes="(min-width:960px) 600px, 92vw" src="/img/protocolo-depois-1000.webp" alt="Depois: sorriso completo com prótese protocolo" width="800" height="533" loading="lazy" decoding="async"></div>
+            <div class="c-camada c-antes"><img srcset="/img/protocolo-antes-640.webp 640w, /img/protocolo-antes-1000.webp 1000w" sizes="(min-width:960px) 600px, 92vw" src="/img/protocolo-antes-1000.webp" alt="Antes: sorriso com poucos dentes, desgastados" width="800" height="533" loading="lazy" decoding="async" style="transform-origin:50% 50.2%;transform:translate(1.25%,0) scale(1.294)"></div>
+            <span class="c-linha" aria-hidden="true"><span class="c-pega"><svg class="ico" viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span></span>
+            <span class="c-tag c-tag-a" aria-hidden="true">Antes</span><span class="c-tag c-tag-d" aria-hidden="true">Depois</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
+          </div>
+          <span class="trat-num">02</span>
+        </div>
+        <div class="trat-corpo">
+          <span class="trat-caso">Caso clínico da Inove · Dr. Eterno Freitas Jr., CRO-PE 9753</span>
+          <h3>Prótese protocolo</h3>
+          <p>Para quem perdeu todos ou quase todos os dentes: uma prótese fixa sobre implantes, planejada para devolver um sorriso fixo, natural e funcional.</p>
+          <ul class="chips"><li>Fixa sobre implantes</li><li>Arcada com pouco ou nenhum dente</li><li>Planejamento com tomografia</li></ul>
+          <a class="trat-acao" href="https://wa.me/5587981393968"><span class="btn-roll"><span>Perguntar sobre o protocolo</span><span aria-hidden="true">Perguntar sobre o protocolo</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="secao folha" id="dr-eterno" aria-labelledby="t-dr">
+  <div class="miolo dr-grade">
+    <figure class="dr-midia" data-revela>
+      <img srcset="/img/dr-eterno-consultorio-560.webp 560w, /img/dr-eterno-consultorio-896.webp 896w" sizes="(min-width:960px) 520px, 92vw" decoding="async" src="/img/dr-eterno-consultorio-896.webp" alt="Dr. Eterno Freitas Jr. sorrindo, de jaleco azul-marinho bordado, apoiado na cadeira do consultório" width="896" height="1200" loading="lazy">
+      <div class="dr-selo"><strong>14</strong><span>anos de experiência em odontologia</span></div>
+    </figure>
+    <div class="dr-texto" data-revela>
+      <span class="sobrelinha">Quem é Eterno Freitas</span>
+      <h2 id="t-dr">Dr. Eterno Freitas Jr.</h2>
+      <p>Especialista em Implantodontia e prótese dentária, dedicado à reabilitação oral em Garanhuns. Dr. Eterno é reconhecido pelo cuidado com cada paciente.</p>
+      <p>Na Clínica Inove, cada caso é tratado com planejamento, empatia e precisão clínica.</p>
+      <ul class="checks">
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Especialista em Implantodontia</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Prótese dentária e reabilitação oral</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Especialização em Implantes, UNIRG-TO, 2011</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>CRO-PE 9753, responsável técnico</li>
+      </ul>
+      <a class="btn btn-marinho" href="#agendar"><span class="btn-roll"><span>Marcar avaliação com o Dr. Eterno</span><span aria-hidden="true">Marcar avaliação com o Dr. Eterno</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="secao depo" id="depoimentos" aria-labelledby="t-depo">
+  <div class="miolo" data-carrossel>
+    <div class="depo-cabeca">
+      <div>
+        <span class="sobrelinha">Depoimentos de pacientes</span>
+        <h2 id="t-depo" style="margin-top:1rem">O que os pacientes contam.</h2>
+      </div>
+      <div class="nota">
+        <strong>5,0</strong>
+        <div>
+          <div class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg></div>
+          <span>127 avaliações<br>no Google</span>
+        </div>
+      </div>
+    </div>
+    <div class="trilho" data-trilho>
+      <article class="cartao"><blockquote>“Tive uma experiência excelente! Desde o primeiro contato via WhatsApp, até o atendimento na recepção e o serviço em si com o Dentista. Dr. Eterno (…) foi me esclarecendo todas as partes do meu tratamento, e me deixando muito segura ao longo dele.”</blockquote><footer><span class="inicial">E</span><div>Eloísa Araujo<small>Avaliação no Google</small></div></footer></article>
+      <article class="cartao"><blockquote>“Lugar ótimo! com profissionais competentes, fiz uma cirurgia de quatro sisos (…) eu tava com receio, mas os doutor explicaram tudo direitinho e deu tudo certo. A recepção também é muito boa, a recepcionista muito amigável.”</blockquote><footer><span class="inicial">Y</span><div>Yasmin Godoi<small>Avaliação no Google</small></div></footer></article>
+      <article class="cartao"><blockquote>“Atendimento excelente, profissionais muito bem qualificados e comunicativos, recepção sempre prestativa e todos os procedimentos que tive foram sempre tranquilo (…)”</blockquote><footer><span class="inicial">J</span><div>Jefferson Henrique<small>Avaliação no Google</small></div></footer></article>
+      <article class="cartao"><blockquote>“Excelente, a equipe da inove é acolhedora e passa segurança para seus clientes, no meu caso em particular destaco toda equipe, em especial Dr Eterno que tem grande paciência comigo.”</blockquote><footer><span class="inicial">F</span><div>Fabio Correia Silva<small>Avaliação no Google</small></div></footer></article>
+      <article class="cartao"><blockquote>“O espaço Inove é um local muito acolhedor, onde nos sentimos bem cuidados por todos que compõem o ambiente. As recepcionistas extremamente atenciosas, independente se estamos na clinica ou em casa, sempre procurando saber como estamos nos sentindo, após cada atendimento. (…)”</blockquote><footer><span class="inicial">G</span><div>Gilvan Freitas<small>Avaliação no Google</small></div></footer></article>
+    </div>
+    <div class="carrossel-setas">
+      <button type="button" data-dir="-1" aria-label="Depoimento anterior"><svg class="ico" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button type="button" data-dir="1" aria-label="Próximo depoimento"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="secao folha" id="agendar" aria-labelledby="t-agendar">
+  <div class="miolo agendar-grade">
+    <div class="agendar-info" data-revela>
+      <span class="sobrelinha">Entre em contato</span>
+      <h2 id="t-agendar">Marque sua avaliação.</h2>
+      <p>Preencha seus dados e a mensagem abre pronta no WhatsApp da clínica. A equipe responde para combinar o melhor horário.</p>
+      <ul class="dados">
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Rua Dr. José Mariano, 355B</strong>Centro, Garanhuns, PE · 55295-335<br><a href="https://www.google.com/maps/search/?api=1&query=Inove%20Odontologia%20e%20Est%C3%A9tica%20-%20Dentista%20em%20Garanhuns%20-%20Implante%20e%20Pr%C3%B3tese%20R.%20Dr.%20Jos%C3%A9%20Mariano%2C%20355b%20-%20Centro%2C%20Garanhuns%20-%20PE%2C%2055295-335">Ver no mapa</a></div></li>
+        <li><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Horário de atendimento</strong>Segunda a sexta, 8h às 18h<br>Sábado, 8h às 12h · Domingo, fechado</div></li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><strong>Telefone e WhatsApp</strong><a href="tel:+5587981393968">(87) 98139-3968</a></div></li>
+      </ul>
+    </div>
+    <form class="form" data-whatsapp="https://wa.me/5587981393968" data-revela>
+      <h3>Agendar pelo WhatsApp</h3>
+      <div class="campo"><label for="f-nome">Seu nome</label><input id="f-nome" name="Nome" type="text" autocomplete="name" required placeholder="Nome completo"></div>
+      <div class="campo"><label for="f-cel">Celular com WhatsApp</label><input id="f-cel" name="Celular" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(87) 99999-9999"></div>
+      <div class="campo"><label for="f-int">O que você procura</label>
+        <select id="f-int" name="Interesse">
+          <option>Avaliação para implante</option>
+          <option>Avaliação para prótese protocolo</option>
+          <option>Outro tratamento</option>
+          <option>Tirar uma dúvida</option>
+        </select>
+      </div>
+      <button class="btn btn-marinho" type="submit"><span class="btn-roll"><span>Enviar pelo WhatsApp</span><span aria-hidden="true">Enviar pelo WhatsApp</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
+      <small>Seus dados são usados apenas para o contato sobre o seu atendimento.</small>
+    </form>
+  </div>
+</section>
+
+<footer class="rodape folha">
+  <div class="miolo">
+    <div class="rodape-grade">
+      <div><img decoding="async" height="160" width="480" class="rodape-logo" src="/img/logo-inove-claro.webp" alt="Espaço Inove · Odontologia e Estética Integrada" loading="lazy"></div>
+      <div><h3>Contato</h3><ul><li><a href="https://wa.me/5587981393968">WhatsApp</a></li><li><a href="tel:+5587981393968">(87) 98139-3968</a></li><li><a href="https://www.instagram.com/espaco.inove/">Instagram @espaco.inove</a></li></ul></div>
+      <div><h3>Endereço</h3><ul><li>Rua Dr. José Mariano, 355B</li><li>Centro, Garanhuns, PE</li><li><a href="https://www.google.com/maps/search/?api=1&query=Inove%20Odontologia%20e%20Est%C3%A9tica%20-%20Dentista%20em%20Garanhuns%20-%20Implante%20e%20Pr%C3%B3tese%20R.%20Dr.%20Jos%C3%A9%20Mariano%2C%20355b%20-%20Centro%2C%20Garanhuns%20-%20PE%2C%2055295-335">Ver no mapa</a></li></ul></div>
+      <div><h3>Navegar</h3><ul><li><a href="#clinica">Clínica</a></li><li><a href="#tratamentos">Tratamentos</a></li><li><a href="#dr-eterno">Dr. Eterno</a></li><li><a href="#agendar">Agendar</a></li></ul></div>
+    </div>
+    <div class="rodape-base">
+      <span>Espaço Inove Odontologia e Estética Integrada · EPAO-PE 1789</span>
+      <span>Responsável técnico: Dr. Eterno Freitas Jr. · CRO-PE 9753</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+var d=document,h=d.documentElement;h.classList.add('com-js');
+var mb=d.querySelector('[data-menu-botao]'),mn=d.querySelector('[data-menu]');
+if(mb&&mn){mb.addEventListener('click',function(){var a=mn.hasAttribute('data-aberto');a?mn.removeAttribute('data-aberto'):mn.setAttribute('data-aberto','');mb.setAttribute('aria-expanded',String(!a));mb.setAttribute('aria-label',a?'Abrir menu':'Fechar menu')});
+mn.addEventListener('click',function(e){if(e.target.closest('a')){mn.removeAttribute('data-aberto');mb.setAttribute('aria-expanded','false');mb.setAttribute('aria-label','Abrir menu')}})}
+var rv=d.querySelectorAll('[data-revela]');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(el){io.observe(el)})}else{rv.forEach(function(el){el.classList.add('visto')})}
+d.querySelectorAll('[data-carrossel]').forEach(function(c){var t=c.querySelector('[data-trilho]');if(!t)return;c.querySelectorAll('[data-dir]').forEach(function(b){b.addEventListener('click',function(){var f=t.firstElementChild,p=f?f.getBoundingClientRect().width+parseFloat(getComputedStyle(t).columnGap||0):t.clientWidth;t.scrollBy({left:p*Number(b.getAttribute('data-dir')),behavior:'smooth'})})})});
+d.querySelectorAll('[data-compara]').forEach(function(c){var r=c.querySelector('input[type=range]');if(!r)return;var up=function(){c.style.setProperty('--pos',r.value+'%')};r.addEventListener('input',up);up()});
+d.querySelectorAll('form[data-whatsapp]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var l=['Olá! Vim pelo site e gostaria de agendar uma avaliação.'];new FormData(f).forEach(function(v,k){if(String(v).trim())l.push(k+': '+v)});window.open(f.getAttribute('data-whatsapp')+'?text='+encodeURIComponent(l.join('\n')),'_blank','noopener')})});
+})();
+</script>
+</body>
+</html>
