@@ -81,8 +81,7 @@ p{margin:0}
 .recorte{position:relative;display:flex;align-items:center;gap:.5rem;height:100%}
 .recorte::before,.recorte::after{content:none;position:absolute;width:var(--r2);height:var(--r2);pointer-events:none}
 .marca{display:flex;align-items:center;text-decoration:none;line-height:1}
-.logo-img{display:block;width:auto;height:48px}
-.marca{background:#fff;padding:5px 12px;border-radius:14px}
+.logo-img{display:block;width:auto;height:46px}
 .menu-botao{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;transition:border-color .2s,background-color .2s}
 .menu-botao:hover,.menu-botao[aria-expanded="true"]{border-color:var(--ouro);background:rgba(111,208,246,.12)}
 .btn-topo{display:none}
@@ -269,7 +268,6 @@ p{margin:0}
   .palco{--aba:84px;display:flex;flex-direction:column;min-height:min(880px,calc(100svh - 28px));border-radius:0 0 var(--r3) var(--r3)}
   .palco-topo{padding:0;border:0}
   .logo-img{height:64px}
-  .marca{background:none;padding:0;border-radius:0}
   .recorte{background:var(--moldura)}
   .recorte-logo .marca{background:none}
   .recorte::before,.recorte::after{content:""}
@@ -413,7 +411,7 @@ h1 em,h2 em,.palco h1 em{font-style:italic}
 <div class="abertura" id="inicio">
   <section class="palco" aria-labelledby="titulo">
     <div class="palco-topo">
-    <div class="recorte recorte-logo"><a class="marca" href="#inicio" aria-label="Início"><img decoding="async" height="240" width="609" class="logo-img" src="/img/logo-im.webp" alt="IM Odontologia Especializada"></a></div>
+    <div class="recorte recorte-logo"><a class="marca" href="#inicio" aria-label="Início"><picture><source media="(max-width:959px)" srcset="/img/logo-im-claro.webp"><img decoding="async" height="240" width="609" class="logo-img" src="/img/logo-im.webp" alt="IM Odontologia Especializada"></picture></a></div>
     <nav aria-label="Principal">
       <ul class="menu" id="menu" data-menu>
         <li><a href="#clinica">Clínica</a></li>
