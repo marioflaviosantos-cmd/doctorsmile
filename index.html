@@ -300,6 +300,27 @@ p{margin:0}
 }
 .avaliacao-lado{display:grid;gap:var(--e3);justify-items:start;margin-top:var(--e4)}
 .avaliacao-lado p{max-width:32rem;color:rgba(255,255,255,.82)}
+/* hero responsiva: celular e tablet fundem a foto no fundo; telas médias afastam o texto das pessoas */
+@media (max-width:959px){
+  .palco{background:linear-gradient(180deg,#0A3D63 0%,#17315C 45%,#1D285B 70%)}
+  .orbita{display:none}
+  .palco-grade{grid-template-columns:minmax(0,1fr)}
+  .retrato{width:calc(100% + 2 * var(--e3));margin:0 0 0 calc(-1 * var(--e3))}
+  .retrato img{border-radius:0;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 28%),linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+    mask-image:linear-gradient(180deg,transparent,#000 28%),linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+    -webkit-mask-composite:source-in;mask-composite:intersect}
+  .selo-b{left:var(--e2);bottom:3%}
+  .selo-a{right:var(--e2);top:auto;bottom:calc(3% + 48px)}
+}
+@media (min-width:600px) and (max-width:959px){
+  .retrato{width:520px;margin:0 auto}
+}
+@media (min-width:960px) and (max-width:1279px){
+  .palco{min-height:min(720px,calc(100svh - 28px));background-position:center,68% center}
+  .palco-texto{max-width:430px}
+  .palco h1{font-size:3.5rem}
+}
 /* tipografia: mesmo padrão da dobra 3 em todo o site */
 h1 em,h2 em,.palco h1 em{font-style:italic}
 .numero strong,.nota strong,.dr-selo strong{font-family:var(--serifa);font-weight:400}
