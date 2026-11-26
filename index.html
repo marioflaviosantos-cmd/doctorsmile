@@ -196,17 +196,36 @@ p{margin:0}
 
 /* depoimentos */
 .secao.depo{background:var(--nevoa)}
-.depo-grade{display:grid;gap:var(--e5);align-items:center}
-.depo-texto h2{max-width:15ch;margin:var(--e3) 0 var(--e3);font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1}
-.depo-texto>p{max-width:28rem;margin:0}
-.depo-nota{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--e3);margin-top:var(--e4);padding:var(--e3);border-radius:var(--r2);background:var(--papel);border:1px solid var(--linha)}
-.depo-media{display:flex;align-items:center;gap:var(--e2);font-size:.95rem;line-height:1.4;color:var(--suave)}
-.depo-media strong{font-family:var(--serifa);font-weight:400;font-size:4rem;line-height:1;color:var(--tinta)}
-.estrelas{display:flex;gap:2px;color:var(--marinho);margin-bottom:.3rem}
-.estrelas svg{width:16px;height:16px;fill:currentColor}
-.depo-foto{position:relative;overflow:hidden;width:100%;max-width:620px;justify-self:center;margin:0;aspect-ratio:1;border-radius:var(--r3);background:var(--marinho-fundo)}
-.depo-foto img{display:block;width:100%;height:100%;object-fit:cover}
-.depo-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,95,143,.18),rgba(7,47,74,.06) 55%,rgba(7,47,74,.45))}
+.depo-cabeca{display:grid;gap:var(--e3);margin-bottom:var(--e5)}
+.depo-cabeca h2{max-width:15ch;margin:var(--e3) 0 0;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1}
+.depo-lado{display:grid;gap:var(--e3);justify-items:start;max-width:24rem}
+.depo-lado>p{margin:0}
+.depo-nota{display:flex;align-items:center;gap:var(--e2);padding:.7rem 1.1rem;border-radius:var(--r2);background:var(--papel);border:1px solid var(--linha);text-decoration:none;font-size:.85rem;line-height:1.4;color:var(--suave);transition:border-color .2s}
+.depo-nota:hover{border-color:var(--marinho)}
+.depo-nota strong{font-family:var(--serifa);font-weight:400;font-size:2.4rem;line-height:1;color:var(--tinta)}
+.depo-nota>span>span:not(.estrelas){display:block}
+.depo-nota>.ico{color:var(--marinho)}
+.estrelas{display:flex;gap:2px;color:var(--marinho);margin-bottom:.15rem}
+.estrelas svg{width:14px;height:14px;fill:currentColor}
+.depo-grade{display:grid;gap:var(--e3)}
+.depo-destaque{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:flex-end;min-height:500px;margin:0;border-radius:var(--r2);background:var(--marinho-fundo)}
+.depo-destaque>img{position:absolute;z-index:-2;top:0;left:0;width:100%;height:68%;object-fit:cover;object-position:60% 50%}
+.depo-destaque::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(10,95,143,.22) 0%,rgba(7,47,74,.12) 38%,rgba(7,47,74,.7) 55%,var(--marinho-fundo) 68%)}
+.depo-fala{width:100%;padding:var(--e3)}
+.depo-fala blockquote{margin:0 0 var(--e3);color:#fff;font-size:1.0625rem;line-height:1.65}
+.depo-card{display:flex;flex-direction:column;margin:0;padding:var(--e4) var(--e3) var(--e3);border-radius:var(--r2);background:var(--papel);border:1px solid var(--linha)}
+.depo-aspas{height:2.2rem;font-family:var(--serifa);font-size:4.5rem;line-height:1;color:var(--marinho)}
+.depo-card blockquote{flex:1;margin:var(--e2) 0 var(--e3);color:var(--texto);font-size:1.0625rem;line-height:1.65}
+.depo-grade blockquote p{margin:0}
+.depo-grade figcaption{display:flex;align-items:center;gap:.75rem}
+.depo-card figcaption{padding-top:var(--e3);border-top:1px solid var(--linha)}
+.depo-inicial{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--marinho);color:#fff;font-weight:500}
+.depo-quem{line-height:1.3}
+.depo-quem b{display:block;font-weight:500;color:var(--tinta)}
+.depo-quem small{font-size:.8rem;color:var(--suave)}
+.depo-fala .depo-inicial{background:var(--ouro);color:var(--tinta)}
+.depo-fala .depo-quem b{color:#fff}
+.depo-fala .depo-quem small{color:rgba(255,255,255,.7)}
 
 /* agendar */
 .agendar-grade{display:grid;gap:var(--e3)}
@@ -240,6 +259,8 @@ p{margin:0}
 .com-js [data-revela].visto{opacity:1;transform:none}
 
 @media (min-width:640px){
+  .depo-grade{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .depo-destaque{grid-column:1/-1;min-height:600px}
   .numeros{grid-template-columns:repeat(4,1fr)}
   .numero,.numero:nth-child(even){padding:var(--e4) var(--e3)}
   .numero:first-child{padding-left:0}
@@ -297,8 +318,9 @@ p{margin:0}
   .miolo{max-width:calc(var(--larg) + 2*var(--e5));padding:0 var(--e5)}
   .secao{padding:var(--e7) 0}
   .sobre-topo{grid-template-columns:1fr 1.2fr;align-items:end;gap:var(--e6)}
-  .depo-grade{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3rem,6vw,6rem)}
-  .depo-foto{max-width:none;aspect-ratio:6/5}
+  .depo-cabeca{grid-template-columns:1fr auto;align-items:end;gap:var(--e5)}
+  .depo-grade{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .depo-destaque{grid-column:2;grid-row:1/span 2;min-height:600px}
   .agendar-grade{grid-template-columns:1fr 1fr;gap:var(--e6);align-items:start}
   .form{padding:var(--e5) var(--e4)}
   .rodape-grade{grid-template-columns:1.2fr 1fr 1fr 1fr}
@@ -530,19 +552,66 @@ h1 em,h2 em,.palco h1 em{font-style:italic}
 </main>
 
 <section class="secao depo folha" id="depoimentos" aria-labelledby="t-depo">
-  <div class="miolo depo-grade">
-    <div class="depo-texto" data-revela>
-      <span class="sol-olho"><b>04</b> Avaliações</span>
-      <h2 id="t-depo">A opinião de quem já <em>passou pela IM.</em></h2>
-      <p>Veja como os pacientes avaliam o atendimento da clínica no Google.</p>
-      <div class="depo-nota">
-        <div class="depo-media"><strong>4,7</strong> <div><div class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg></div><span>7 avaliações no Google</span></div></div>
-        <a class="btn btn-marinho" href="https://www.google.com/maps/search/?api=1&query=IM%20Odontologia%20Especializada%20R.%20Cleto%20Camp%C3%AAlo%2C%2098%20Garanhuns%20PE"><span class="btn-roll"><span>Ver avaliações</span><span aria-hidden="true">Ver avaliações</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+  <div class="miolo">
+    <div class="depo-cabeca" data-revela>
+      <div>
+        <span class="sol-olho"><b>04</b> Avaliações</span>
+        <h2 id="t-depo">A opinião de quem já <em>passou pela IM.</em></h2>
+      </div>
+      <div class="depo-lado">
+        <p>Veja como os pacientes avaliam o atendimento da clínica no Google.</p>
+        <a class="depo-nota" href="https://www.google.com/maps/search/?api=1&query=IM%20Odontologia%20Especializada%20R.%20Cleto%20Camp%C3%AAlo%2C%2098%20Garanhuns%20PE">
+          <strong>4,7</strong>
+          <span><span class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8z"/></svg></span><span>7 avaliações no Google</span></span>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
       </div>
     </div>
-    <figure class="depo-foto" data-revela>
-      <img src="/img/trat-aparelho.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
-    </figure>
+    <!-- depoimentos com lorem ipsum, provisórios: trocar por depoimentos reais e autorizados -->
+    <div class="depo-grade" data-revela>
+      <figure class="depo-destaque">
+        <img src="/img/trat-aparelho.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
+        <div class="depo-fala">
+          <blockquote lang="la"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero, sed cursus ante dapibus diam.</p></blockquote>
+          <figcaption>
+          <span class="depo-inicial" aria-hidden="true">L</span>
+          <span class="depo-quem"><b>Lorem Ipsum</b><small>Dolor sit amet</small></span>
+        </figcaption>
+        </div>
+      </figure>
+      <figure class="depo-card">
+        <span class="depo-aspas" aria-hidden="true">“</span>
+        <blockquote lang="la"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+        <figcaption>
+          <span class="depo-inicial" aria-hidden="true">L</span>
+          <span class="depo-quem"><b>Lorem Ipsum</b><small>Dolor sit amet</small></span>
+        </figcaption>
+      </figure>
+      <figure class="depo-card">
+        <span class="depo-aspas" aria-hidden="true">“</span>
+        <blockquote lang="la"><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></blockquote>
+        <figcaption>
+          <span class="depo-inicial" aria-hidden="true">D</span>
+          <span class="depo-quem"><b>Lorem Ipsum</b><small>Dolor sit amet</small></span>
+        </figcaption>
+      </figure>
+      <figure class="depo-card">
+        <span class="depo-aspas" aria-hidden="true">“</span>
+        <blockquote lang="la"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></blockquote>
+        <figcaption>
+          <span class="depo-inicial" aria-hidden="true">S</span>
+          <span class="depo-quem"><b>Lorem Ipsum</b><small>Dolor sit amet</small></span>
+        </figcaption>
+      </figure>
+      <figure class="depo-card">
+        <span class="depo-aspas" aria-hidden="true">“</span>
+        <blockquote lang="la"><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></blockquote>
+        <figcaption>
+          <span class="depo-inicial" aria-hidden="true">A</span>
+          <span class="depo-quem"><b>Lorem Ipsum</b><small>Dolor sit amet</small></span>
+        </figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
