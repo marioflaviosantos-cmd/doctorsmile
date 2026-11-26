@@ -32,6 +32,7 @@
   --nevoa:#F3F7F9;
   --linha:#D8E2E8;
   --f:"Jost",system-ui,sans-serif;
+  --serifa:"Playfair Display",Constantia,Georgia,serif;
   --e1:.5rem;--e2:1rem;--e3:1.5rem;--e4:2rem;--e5:3rem;--e6:4.5rem;--e7:7rem;
   --r1:12px;--r2:20px;--r3:28px;
   --larg:1280px;--quadro:1920px;
@@ -41,7 +42,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--moldura);color:var(--texto);font-family:var(--f);font-weight:400;font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3{font-family:var(--f);color:var(--tinta);font-weight:300;line-height:1.08;letter-spacing:-.02em;margin:0}
+h1,h2,h3{font-family:var(--serifa);color:var(--tinta);font-weight:400;line-height:1.08;letter-spacing:-.01em;margin:0}
 p{margin:0}
 :focus-visible{outline:2px solid var(--ouro-escuro);outline-offset:3px;border-radius:6px}
 .folha{background:var(--papel);margin:8px;border-radius:var(--r3);overflow:hidden}
@@ -128,7 +129,7 @@ p{margin:0}
 .numero span{display:block;margin-top:.6rem;font-size:.95rem;color:var(--suave);line-height:1.4}
 
 /* tratamentos */
-.tratamentos{--serifa:"Playfair Display",Constantia,Georgia,serif;color:var(--texto);background:radial-gradient(90% 120% at -10% -10%,#fff 0 45%,transparent 45.2%),radial-gradient(60% 90% at 105% 110%,rgba(18,163,223,.28),transparent 70%),linear-gradient(120deg,#F4F8FA 0%,#DCEAF2 55%,#C4DCEA 100%)}
+.tratamentos{color:var(--texto);background:radial-gradient(90% 120% at -10% -10%,#fff 0 45%,transparent 45.2%),radial-gradient(60% 90% at 105% 110%,rgba(18,163,223,.28),transparent 70%),linear-gradient(120deg,#F4F8FA 0%,#DCEAF2 55%,#C4DCEA 100%)}
 .sol-grade{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--e4)}
 .sol-topo{display:flex;align-items:center;justify-content:space-between;gap:var(--e2)}
 .sol-olho{display:flex;align-items:center;gap:.75rem;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--suave)}
@@ -137,7 +138,7 @@ p{margin:0}
 .sol-setas{display:flex;gap:.5rem;flex:none}
 .sol-setas button{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(10,36,56,.18);background:rgba(255,255,255,.6);color:var(--tinta);cursor:pointer;transition:background-color .2s,color .2s}
 .sol-setas button:hover{background:var(--tinta);color:#fff}
-.sol-texto h2{font-family:var(--serifa);font-weight:400;font-size:clamp(3rem,6vw,4.6rem);line-height:.98}
+.sol-texto h2{font-size:clamp(3rem,6vw,4.6rem);line-height:.98}
 .sol-texto h2 em{display:block;margin-top:.15em;font-size:.58em;line-height:1.15}
 .sol-texto p{max-width:24rem;margin:var(--e3) 0 var(--e4)}
 .sol-botao{display:inline-flex;align-items:center;gap:var(--e3);min-height:56px;padding:6px 6px 6px 1.6rem;border-radius:999px;background:#fff;color:var(--tinta);font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 10px 30px rgba(10,60,95,.12)}
@@ -298,6 +299,11 @@ p{margin:0}
 }
 .avaliacao-lado{display:grid;gap:var(--e3);justify-items:start;margin-top:var(--e4)}
 .avaliacao-lado p{max-width:32rem;color:rgba(255,255,255,.82)}
+/* tipografia: mesmo padrão da dobra 3 em todo o site */
+h1 em,h2 em,.palco h1 em{font-style:italic}
+.numero strong,.nota strong,.dr-selo strong{font-family:var(--serifa);font-weight:400}
+.sol-card h3,.rodape h3{font-family:var(--f);font-weight:500}
+.btn,.trat-acao{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
 </style>
 </head>
 <body>
