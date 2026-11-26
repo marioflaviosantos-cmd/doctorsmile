@@ -164,19 +164,33 @@ p{margin:0}
 }
 
 /* doutor */
-.dr-grade{display:grid;gap:var(--e5);align-items:center}
-.dr-midia{position:relative;margin:0;max-width:520px;width:100%;justify-self:center}
-.dr-midia>img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:var(--r3)}
-.dr-selo{position:absolute;right:-6px;bottom:-6px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.35rem;width:42%;aspect-ratio:1;padding:var(--e2);border-radius:var(--r3);border:10px solid var(--papel);text-align:center;color:#fff;
-  background:radial-gradient(circle at 30% 25%,#0E9AD6 0%,#0A5F8F 60%,#072F4A 100%)}
-.dr-selo strong{font-weight:300;font-size:clamp(2.6rem,9vw,3.6rem);line-height:1;letter-spacing:-.03em}
-.dr-selo strong small{font-size:.55em;color:var(--ouro);vertical-align:top}
-.dr-selo span{font-size:.85rem;line-height:1.3;color:rgba(255,255,255,.82)}
-.dr-texto h2{font-size:clamp(2.4rem,6vw,3.8rem);margin:var(--e2) 0 var(--e3)}
-.dr-texto>p{max-width:34rem;margin-bottom:var(--e2)}
-.checks{list-style:none;margin:var(--e4) 0;padding:0;display:grid;gap:.9rem var(--e3)}
-.checks li{display:flex;gap:.65rem;align-items:flex-start;font-weight:500;color:var(--tinta);line-height:1.35}
-.checks .ico{flex:none;width:20px;height:20px;margin-top:.05rem;color:var(--marinho);stroke-width:2.2}
+.equipe{background:linear-gradient(90deg,#F5F9FB 45%,rgba(245,249,251,.35)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34L28 66v34' fill='none' stroke='%230A5F8F' stroke-opacity='.09'/%3E%3C/svg%3E") #F5F9FB}
+.secao.equipe{padding:var(--e2) 0 var(--e5)}
+.eq-grade{display:grid;gap:var(--e5);align-items:center}
+.eq-painel{position:relative;isolation:isolate;display:flex;flex-direction:column;width:100%;max-width:620px;justify-self:center}
+.eq-painel::before{content:"";position:absolute;z-index:-1;inset:0;border-radius:var(--r3);
+  background:radial-gradient(circle at 58% 62%,rgba(255,255,255,.2) 0 24%,transparent 24.3% 33%,rgba(255,255,255,.09) 33.2% 33.5%,transparent 33.7%),linear-gradient(155deg,#12A3DF 0%,#0A7FC0 50%,#0A5A88 100%)}
+.eq-titulo{padding:var(--e4) var(--e3) var(--e2)}
+.eq-sobre{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.88)}
+.eq-titulo h2{margin-top:var(--e2);color:#fff;font-size:clamp(2.6rem,6vw,4rem);line-height:1}
+.eq-titulo h2 em{display:block}
+.eq-foto{position:relative;margin:0;width:100%}
+.eq-foto img{display:block;width:100%;height:auto;border-radius:0 0 var(--r3) var(--r3)}
+.eq-etiqueta{position:absolute;display:flex;flex-direction:column;gap:.1rem;padding:.5rem .9rem;border-radius:999px;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 12px 28px rgba(4,30,50,.25);color:var(--tinta);line-height:1.25;white-space:nowrap}
+.eq-etiqueta b{font-size:.8rem;font-weight:500}
+.eq-etiqueta small{font-size:.68rem;letter-spacing:.06em;color:var(--suave)}
+.eq-etiqueta::after{content:"";position:absolute;top:50%;width:12px;height:12px;border-radius:50%;background:var(--ouro);border:3px solid #fff;box-sizing:content-box;transform:translateY(-50%)}
+.eq-igor{left:3%;bottom:6%}
+.eq-igor::after{right:-24px}
+.eq-milena{right:3%;bottom:19%}
+.eq-milena::after{left:-24px}
+.eq-intro{max-width:32rem;margin:var(--e3) 0 var(--e4);font-size:1.0625rem}
+.eq-numeros{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e4) var(--e3)}
+.eq-numeros strong{display:block;padding-bottom:.35rem;border-bottom:1px solid var(--linha);font-family:var(--serifa);font-weight:400;font-size:clamp(3rem,6vw,4.2rem);line-height:1;color:var(--tinta)}
+.eq-numeros i{margin-left:.15em;font-style:normal;font-size:.55em;color:var(--ouro-escuro)}
+.eq-numeros h3{margin:.8rem 0 .35rem;font-family:var(--f);font-weight:500;font-size:1.02rem;line-height:1.3}
+.eq-numeros p{margin:0;font-size:.9rem;line-height:1.5;color:var(--suave)}
+.eq-fecho{margin:var(--e4) 0 var(--e3);font-weight:500;color:var(--tinta)}
 
 /* depoimentos */
 .depo{background:var(--marinho-fundo);color:#fff;border-radius:var(--r3);margin:0 8px}
@@ -239,9 +253,15 @@ p{margin:0}
   .numero+.numero{border-left:1px solid var(--linha)}
 }
 @media (min-width:960px){
-  .dr-grade{grid-template-columns:.95fr 1.05fr;gap:var(--e6)}
-  .dr-midia{justify-self:start}
-  .checks{grid-template-columns:1fr 1fr}
+  .secao.equipe{padding:24px 0}
+  .equipe .eq-grade{width:calc(100% - 48px);grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(3rem,6vw,6rem)}
+  .eq-painel{max-width:none;align-self:stretch;justify-content:space-between}
+  .eq-painel::before{right:9%}
+  .eq-titulo{padding:var(--e5) var(--e4) var(--e2)}
+  .eq-foto{width:min(100%,560px);align-self:flex-end}
+  .eq-foto img{border-radius:0}
+  .eq-etiqueta b{font-size:.92rem}
+  .eq-lado{padding:var(--e5) var(--e3) var(--e5) 0}
   .abertura{padding:14px 14px 0}
   .palco{--aba:84px;display:flex;flex-direction:column;min-height:min(880px,calc(100svh - 28px));border-radius:0 0 var(--r3) var(--r3)}
   .palco-topo{padding:0;border:0}
@@ -321,9 +341,10 @@ p{margin:0}
   .palco-texto{max-width:430px}
   .palco h1{font-size:3.5rem}
 }
+@media (min-width:960px) and (max-width:1279px){.eq-titulo h2{font-size:3.2rem}}
 /* tipografia: mesmo padrão da dobra 3 em todo o site */
 h1 em,h2 em,.palco h1 em{font-style:italic}
-.numero strong,.nota strong,.dr-selo strong{font-family:var(--serifa);font-weight:400}
+.numero strong,.nota strong{font-family:var(--serifa);font-weight:400}
 .sol-card h3,.rodape h3{font-family:var(--f);font-weight:500}
 .btn,.trat-acao{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
 </style>
@@ -430,23 +451,31 @@ h1 em,h2 em,.palco h1 em{font-style:italic}
   </div>
 </section>
 
-<section class="secao folha" id="dentistas" aria-labelledby="t-dr">
-  <div class="miolo dr-grade">
-    <figure class="dr-midia" data-revela>
-      <img srcset="/img/consultorio-560.webp 560w, /img/consultorio-896.webp 896w" sizes="(min-width:960px) 520px, 92vw" decoding="async" src="/img/consultorio-896.webp" alt="Dentista de jaleco branco sentado junto à cadeira do consultório" width="896" height="1200" loading="lazy">
-      <div class="dr-selo"><strong>4,7</strong><span>de nota no Google</span></div>
-    </figure>
-    <div class="dr-texto" data-revela>
-      <span class="sobrelinha">Quem cuida do seu sorriso</span>
-      <h2 id="t-dr">Dr. Igor e Dra. Milena.</h2>
-      <p>Dr. Igor Andrade atua em clínica geral e ortodontia. Dra. Milena Cerqueira, em clínica geral e reabilitação oral.</p>
-      <p>Juntos, oferecem um cuidado que vai da prevenção ao tratamento.</p>
-      <ul class="checks">
-        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Dr. Igor Andrade, CRO-PE 9503</li>
-        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Clínico geral e ortodontia</li>
-        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Dra. Milena Cerqueira, CRO-PE 9502</li>
-        <li><svg class="ico" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Clínico geral e reabilitação oral</li>
+<section class="secao equipe folha" id="dentistas" aria-labelledby="t-dr">
+  <div class="miolo eq-grade">
+    <div class="eq-painel" data-revela>
+      <div class="eq-titulo">
+        <span class="eq-sobre">Quem cuida do seu sorriso</span>
+        <h2 id="t-dr">Dr. Igor <em>e Dra. Milena.</em></h2>
+      </div>
+      <figure class="eq-foto">
+        <img srcset="/img/doutores-640.webp 640w, /img/doutores-1274.webp 1274w" sizes="(min-width:960px) 540px, 90vw" src="/img/doutores-640.webp" alt="Dr. Igor Andrade e Dra. Milena Cerqueira de jaleco azul-marinho e braços cruzados" width="1274" height="1400" loading="lazy" decoding="async">
+        <figcaption>
+          <span class="eq-etiqueta eq-igor"><b>Dr. Igor Andrade</b><small>CRO-PE 9503</small></span>
+          <span class="eq-etiqueta eq-milena"><b>Dra. Milena Cerqueira</b><small>CRO-PE 9502</small></span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="eq-lado" data-revela>
+      <span class="sol-olho"><b>03</b> Nossa equipe</span>
+      <p class="eq-intro">Dr. Igor atua em clínica geral e ortodontia. Dra. Milena, em clínica geral e reabilitação oral.</p>
+      <ul class="eq-numeros">
+        <li><strong>2</strong><h3>Cirurgiões-dentistas</h3><p>Ambos com registro no CRO-PE.</p></li>
+        <li><strong>3</strong><h3>Áreas de atuação</h3><p>Clínica geral, ortodontia e reabilitação oral.</p></li>
+        <li><strong>4,7<i aria-hidden="true">★</i></strong><h3>Nota no Google</h3><p>Média de 7 avaliações.</p></li>
+        <li><strong>5<i>dias</i></strong><h3>Por semana</h3><p>Segunda a sexta, das 8h às 18h.</p></li>
       </ul>
+      <p class="eq-fecho">Juntos, um cuidado que vai da prevenção ao tratamento.</p>
       <a class="btn btn-marinho" href="#agendar"><span class="btn-roll"><span>Agendar minha avaliação</span><span aria-hidden="true">Agendar minha avaliação</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </div>
   </div>
