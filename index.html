@@ -282,7 +282,7 @@ p{margin:0}
   .menu{display:flex;flex-direction:row;align-items:center;gap:clamp(2.5rem,3.4vw,4rem);position:static;padding:0;background:none;box-shadow:none}
   .menu a{border:0;padding:.4rem 0;font-size:1rem}
   .menu .menu-cta{display:none}
-  .palco{background-image:linear-gradient(90deg,rgba(7,47,74,.94) 0%,rgba(7,47,74,.62) 38%,rgba(7,47,74,0) 64%),url(/img/hero-bg-1920.webp);background-size:cover;background-position:center right}
+  .palco::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(90deg,rgba(7,47,74,.94) 0%,rgba(7,47,74,.62) 38%,rgba(7,47,74,0) 64%),url(/img/hero-bg-1920.webp);background-size:cover;background-position:center,74% center}
   .palco-grade{flex:1;width:min(100% - 4rem,1280px);margin:0 auto;padding:var(--aba) 0 0;grid-template-columns:minmax(0,1fr);gap:var(--e4)}
   .palco-acoes{display:flex;flex-wrap:wrap;max-width:none}
   .palco-acoes .btn{width:auto}
@@ -337,11 +337,67 @@ p{margin:0}
   .retrato{width:520px;margin:0 auto}
 }
 @media (min-width:960px) and (max-width:1279px){
-  .palco{min-height:min(720px,calc(100svh - 28px));background-position:center,68% center}
+  .palco{min-height:min(720px,calc(100svh - 28px))}
+  .palco::before{background-position:center,68% center}
   .palco-texto{max-width:430px}
   .palco h1{font-size:3.5rem}
 }
 @media (min-width:960px) and (max-width:1279px){.eq-titulo h2{font-size:3.2rem}}
+/* efeitos: abertura, tratamentos e equipe */
+.palco h1{max-width:12.5ch}
+.linha{display:block;overflow:hidden;padding:0 .12em .14em 0;margin-bottom:-.14em}
+.linha>span{display:block}
+.sol-card{position:relative;isolation:isolate}
+.sol-card::before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:inherit;background:linear-gradient(160deg,#0B84C4,#0A5F8F 55%,#074166);opacity:0;transition:opacity .35s}
+.sol-card h3,.sol-card ul{transition:color .35s}
+@media (hover:hover){
+  .sol-card:hover::before,.sol-card:focus-within::before{opacity:1}
+  .sol-card:hover h3,.sol-card:hover ul,.sol-card:focus-within h3,.sol-card:focus-within ul{color:#fff}
+  .sol-card:hover .sol-seta,.sol-card:focus-within .sol-seta{background:#fff;color:var(--tinta)}
+  .sol-card .sol-seta:hover{background:var(--ouro);color:var(--tinta)}
+}
+@media (max-width:1099px){.sol-trilho{overflow-y:hidden}}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes sobe-linha{from{transform:translateY(115%)}}
+  @keyframes sobe{from{opacity:0;transform:translateY(28px)}}
+  @keyframes cresce{from{opacity:0;transform:translateY(56px) scale(.88)}}
+  @keyframes zoom-fundo{from{opacity:.25;transform:scale(1.1)}}
+
+  /* abertura: roda ao carregar */
+  .palco .sobrelinha{animation:sobe .6s ease .05s backwards}
+  .palco h1 .linha>span{animation:sobe-linha .85s cubic-bezier(.2,.7,.2,1) .15s backwards}
+  .palco h1 em.linha>span{animation-delay:.32s}
+  .palco-texto p{animation:sobe .7s ease .5s backwards}
+  .palco-acoes{animation:sobe .7s ease .65s backwards}
+  .palco::before{transform-origin:75% 100%;animation:zoom-fundo 1.8s cubic-bezier(.2,.7,.2,1) backwards}
+  .retrato img{transform-origin:50% 100%;animation:cresce 1.1s cubic-bezier(.2,.7,.2,1) .35s backwards}
+  .selo-a{animation:sobe .6s ease 1.15s backwards}
+  .selo-b{animation:sobe .6s ease 1.4s backwards}
+
+  /* tratamentos: cards em sequência */
+  .com-js .sol-trilho[data-revela]{opacity:1;transform:none}
+  .com-js .sol-trilho:not(.visto) .sol-card{opacity:0}
+  .com-js .sol-trilho.visto .sol-card{animation:sobe .75s cubic-bezier(.2,.7,.2,1) backwards}
+  .com-js .sol-trilho.visto .sol-card:nth-child(2){animation-delay:.14s}
+  .com-js .sol-trilho.visto .sol-card:nth-child(3){animation-delay:.28s}
+  .com-js .sol-trilho.visto .sol-card:nth-child(4){animation-delay:.42s}
+
+  /* equipe: título, números e etiquetas */
+  .com-js .eq-painel .linha>span{transform:translateY(115%);transition:transform .9s cubic-bezier(.2,.7,.2,1) .2s}
+  .com-js .eq-painel em.linha>span{transition-delay:.4s}
+  .com-js .eq-painel.visto .linha>span{transform:none}
+  .eq-numeros strong{overflow:hidden}
+  .eq-num{display:block}
+  .com-js .eq-numeros[data-revela]{opacity:1;transform:none}
+  .com-js .eq-num{transform:translateY(120%);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .com-js .eq-numeros.visto .eq-num{transform:none}
+  .com-js .eq-numeros li:nth-child(2) .eq-num{transition-delay:.15s}
+  .com-js .eq-numeros li:nth-child(3) .eq-num{transition-delay:.3s}
+  .com-js .eq-numeros li:nth-child(4) .eq-num{transition-delay:.45s}
+  .com-js .eq-etiqueta{opacity:0;transform:translateY(10px) scale(.8);transition:opacity .45s ease .7s,transform .55s cubic-bezier(.2,1.4,.4,1) .7s}
+  .com-js .eq-milena{transition-delay:1.15s}
+  .com-js .eq-foto.visto .eq-etiqueta{opacity:1;transform:none}
+}
 /* tipografia: mesmo padrão da dobra 3 em todo o site */
 h1 em,h2 em,.palco h1 em{font-style:italic}
 .numero strong,.nota strong{font-family:var(--serifa);font-weight:400}
@@ -373,7 +429,7 @@ h1 em,h2 em,.palco h1 em{font-style:italic}
     <div class="palco-grade">
       <div class="palco-texto">
         <span class="sobrelinha">Odontologia especializada · Garanhuns</span>
-        <h1 id="titulo">Seu sorriso em <em>boas mãos.</em></h1>
+        <h1 id="titulo"><span class="linha"><span>Seu sorriso em</span></span> <em class="linha"><span>boas mãos.</span></em></h1>
         <p>Na IM, ortodontia, reabilitação oral e clínica geral caminham juntas para cuidar da saúde, da estética e da sua confiança ao sorrir.</p>
         <div class="palco-acoes">
           <a class="btn btn-ouro" href="https://wa.me/5587981393968"><span class="btn-roll"><span>Conversar no WhatsApp</span><span aria-hidden="true">Conversar no WhatsApp</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
@@ -456,9 +512,9 @@ h1 em,h2 em,.palco h1 em{font-style:italic}
     <div class="eq-painel" data-revela>
       <div class="eq-titulo">
         <span class="eq-sobre">Quem cuida do seu sorriso</span>
-        <h2 id="t-dr">Dr. Igor <em>e Dra. Milena.</em></h2>
+        <h2 id="t-dr"><span class="linha"><span>Dr. Igor</span></span> <em class="linha"><span>e Dra. Milena.</span></em></h2>
       </div>
-      <figure class="eq-foto">
+      <figure class="eq-foto" data-revela>
         <img srcset="/img/doutores-640.webp 640w, /img/doutores-1274.webp 1274w" sizes="(min-width:960px) 540px, 90vw" src="/img/doutores-640.webp" alt="Dr. Igor Andrade e Dra. Milena Cerqueira de jaleco azul-marinho e braços cruzados" width="1274" height="1400" loading="lazy" decoding="async">
         <figcaption>
           <span class="eq-etiqueta eq-igor"><b>Dr. Igor Andrade</b><small>CRO-PE 9503</small></span>
@@ -469,11 +525,11 @@ h1 em,h2 em,.palco h1 em{font-style:italic}
     <div class="eq-lado" data-revela>
       <span class="sol-olho"><b>03</b> Nossa equipe</span>
       <p class="eq-intro">Dr. Igor atua em clínica geral e ortodontia. Dra. Milena, em clínica geral e reabilitação oral.</p>
-      <ul class="eq-numeros">
-        <li><strong>2</strong><h3>Cirurgiões-dentistas</h3><p>Ambos com registro no CRO-PE.</p></li>
-        <li><strong>3</strong><h3>Áreas de atuação</h3><p>Clínica geral, ortodontia e reabilitação oral.</p></li>
-        <li><strong>4,7<i aria-hidden="true">★</i></strong><h3>Nota no Google</h3><p>Média de 7 avaliações.</p></li>
-        <li><strong>5<i>dias</i></strong><h3>Por semana</h3><p>Segunda a sexta, das 8h às 18h.</p></li>
+      <ul class="eq-numeros" data-revela>
+        <li><strong><span class="eq-num">2</span></strong><h3>Cirurgiões-dentistas</h3><p>Ambos com registro no CRO-PE.</p></li>
+        <li><strong><span class="eq-num">3</span></strong><h3>Áreas de atuação</h3><p>Clínica geral, ortodontia e reabilitação oral.</p></li>
+        <li><strong><span class="eq-num">4,7<i aria-hidden="true">★</i></span></strong><h3>Nota no Google</h3><p>Média de 7 avaliações.</p></li>
+        <li><strong><span class="eq-num">5<i>dias</i></span></strong><h3>Por semana</h3><p>Segunda a sexta, das 8h às 18h.</p></li>
       </ul>
       <p class="eq-fecho">Juntos, um cuidado que vai da prevenção ao tratamento.</p>
       <a class="btn btn-marinho" href="#agendar"><span class="btn-roll"><span>Agendar minha avaliação</span><span aria-hidden="true">Agendar minha avaliação</span></span> <span class="seta" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
